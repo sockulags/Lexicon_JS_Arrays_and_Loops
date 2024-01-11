@@ -33,8 +33,46 @@ while(iterations < arr3.length){
 }
 console.log(mtArr)
 // Create an array with random numbers. Loop through the array and add them all together. Log the total sum of all the elements to the console. hint - You will need a variable here that store the sum as you iterate over the array.
+const randomNrs = [];
+const randomAmount = Math.ceil(Math.random() * 30)
+for(let x = 0; x< randomAmount; x++){
+    randomNrs.push(Math.ceil(Math.random()*30))
+}
+console.log(randomNrs)
+let sum  = 0;
+randomNrs.forEach(num=>
+    sum += num)
+console.log(sum)
 // Create an array with some elements. Now search for a specific element while you are looping through the array. If you find the element you are searching for, log it to the console.
+const someElemnentsArr =[{someElement: "element"}, { someOtherElement: "element2"}, "element"]
+for(let x = 0; x < someElemnentsArr.length; x++){
+    if(someElemnentsArr[x].someElement === "element"){
+        console.log(someElemnentsArr[x])
+    }
+}
 // Create an array with some elements, remove the last element WITHOUT using pop().
+console.log(someElemnentsArr)
+someElemnentsArr.splice(someElemnentsArr.length-1, 1)
+console.log(someElemnentsArr)
+
 // Create an array with 10 different numbers. Find the biggest number in the array and log it to the console. hint - You will need a variable that holds the current biggest number.
+const intArr = [7, 2, 10, 5, 1, 8, 3, 9, 6, 4];
+let highestValue = 0;
+for(let x= 0; x< intArr.length; x++){
+    if(intArr[x] > highestValue){
+        highestValue = intArr[x]
+    }
+}
+console.log(highestValue);
+
 // Create an array with some elements and an empty array. Using a loop, copy the content of the first array to the empty array.
+const arrayWithElements = [1, 'hello', true, { key: 'value' }, [3, 5]];
+const arrayWithoutElements = [];
+arrayWithElements.forEach(element=>
+    arrayWithoutElements.push(element))
+console.log(arrayWithoutElements)
 // Create an array with some elements. Use a loop to empty the entire array so there are no elements left in the end.
+for(let x = arrayWithElements.length-1; x >= 0; x--){
+    arrayWithElements.splice(x, 1)
+}
+console.log(arrayWithElements)
